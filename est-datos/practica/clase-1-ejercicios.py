@@ -137,8 +137,130 @@ def repetir_palabra():
     numero = int(input("Número: "))
     print(palabra * numero)
 
+# Ejercicio 14
+def mayor_de_edad():
+    '''
+    Escribir un programa que pregunte una edad y muestre por pantalla si es mayor de edad o no.
+    '''
+    edad = int(input("Edad: "))
+    if edad < 18:
+        print("Es menor de edad.")
+    else:
+        print("Es mayor de edad.")
+
+# Ejercicio 15
+def contraseña():
+    contraseña = "contraseña"
+    pregunta = str(input("Ingrese contraseña: " ))
+    if pregunta.lower() == contraseña.lower():
+        print("Correcto")
+    else:
+        print("Incorrecto")
+
+# Ejercicio 15 bis
+def menor_o_mayor():
+    '''
+    Escribir un programa pida dos números enteros e informe por pantalla cual es menor de los dos, 
+    si son iguales, indicarlo por separado.
+    '''
+    num1 = int(input("num 1:"))
+    num2 = int(input("num 2: "))
+
+    if num1 > num2: 
+        print(f"{num2} es menor")
+    else:
+        print(f"{num1} es menor")
+
+#Ejercicio 16 
+def par_o_impar():
+    '''
+    Escribir un programa que pida un número entero e indique si dicho número es par o impar
+    '''
+    num = int(input("Ingrese un número entero: "))
+
+    if num % 2 == 0:
+        print(f"El número {num} es par.")
+    else:
+        print(f"El número {num} es impar.")
+
+# Ejercicio 17
+def pagar_impuestos():
+    '''
+    Para pagar un determinado impuesto se debe ser mayor de 18 años y tener unos ingresos iguales o superiores a $100000 mensuales. 
+    Escribir un programa que pregunte la edad y los ingresos mensuales y muestre por pantalla si se debe pagar o no.
+    '''
+    edad = int(input("Edad? "))
+    ingresos = int(input("Ingresos? "))
+    if edad >= 18 and ingresos >= 100000:
+        print("Debe pagar!")
+    else:
+        print("No debe pagar! woo!")
+
+# Ejercicio 18
+def semana():
+    '''
+    Escribir un programa que pida un número entero del 1 al 7 y muestre por pantalla el día de la semana correspondiente.
+    Controlar que el número se encuentre en el rango correcto, si no es así, informar un error.
+    Por ejemplo, si el número es 2 el día es martes.
+    '''
+    num = int(input("Ingrese un número del 1 al 7: "))
+
+    if num == 1:
+        print("El día correspondiente es Lunes.")
+    elif num == 2:
+        print("El día correspondiente es Martes.")
+    elif num == 3:
+        print("El día correspondiente es Miércoles.")
+    elif num == 4:
+        print("El día correspondiente es Jueves.")
+    elif num == 5:
+        print("El día correspondiente es Viernes.")
+    elif num == 6:
+        print("El día correspondiente es Sábado.")
+    elif num == 7:
+        print("El día correspondiente es Domingo.")
+    else:
+        print("Error: el número debe estar entre 1 y 7.")
+
+# Ejercicio 19
+def grupos_escuela():
+    '''
+    Las y los alumnas y alumnos de un curso se han dividido en dos grupos A y B de acuerdo al género y el nombre. 
+    El grupo A esta formado por las personas de genero femenino con una inicial de nombre anterior a la M 
+    y las personas de genero masculino con un inicial de nombre posterior a la N y el grupo B por el resto. 
+    Escribir un programa que pregunte la inicial y el género, y muestre por pantalla el grupo que corresponde.
+    '''
+    grupo_A_femenino= {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"}
+    grupo_A_masculino = {"O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}
+
+    inicial = input("Inicial: ").strip().upper()
+    genero = input("Género (M/F): ").strip().upper()
+
+    if (genero == "F" and inicial in grupo_A_femenino) or \
+    (genero == "M" and inicial in grupo_A_masculino):
+        print("Grupo A.")
+    else:
+        print("Grupo B.")
+
+# Ejercicio 20
+def precio_a_cliente():
+    '''
+    Escribir un programa para una empresa que tiene salas de juegos para todas las edades.
+    Quiere calcular de forma automática el precio que debe cobrar a sus clientes por entrar. 
+    El programa debe preguntar la edad del cliente y mostrar el precio de la entrada. 
+    Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar $5 
+    y si es mayor de 18 años, $10.
+    '''
+    edad = int(input("Edad? "))
+    if edad < 4:
+        print("Gratis")
+    elif edad >= 4 and edad <= 18:
+        print("Precio: 5$")
+    else:
+        print("Precio: 10$") 
+
 def main():
-    repetir_palabra()
+    menor_o_mayor()
 
 if __name__ == "__main__":
     main()
