@@ -259,6 +259,73 @@ def precio_a_cliente():
     else:
         print("Precio: 10$") 
 
+# Ejercicio 21
+def uno_al_cien():
+    '''
+    Mostrar por pantalla todos los números enteros entre 1 y 100, 
+    hacerlo usando un bucle while y tambien con un bucle for.
+    '''
+    num = 1
+    while num <= 100:
+        print(num)
+        num = num + 1
+
+# Ejercicio 21 bis
+def uno_al_cien_for():
+    for num in range(1, 101):
+        print(num)
+
+# Ejercicio 22
+def numeros_entre():
+    '''
+    Escribir un programa que pida dos números enteros e imprima todos los números enteros entre ellos.
+    '''
+    num1 = int(input("num1: "))
+    num2 = int(input("num2: "))
+    while num1 != num2:
+        print(num1)
+        num1 = num1 + 1
+
+#Ejercicio 23
+def nombre_repetido():
+    '''
+    Escribir un programa que pregunte un nombre en la consola y un número entero e imprima por pantalla 
+    en líneas distintas el nombre tantas veces como el número introducido.
+    '''
+    nombre = input("nombre: ")  
+    num = int(input("num: ")) 
+
+    for i in range(num):  
+        print(nombre)  
+
+# Ejercicio 24
+def numeros_impares():
+    '''
+    Escribir un programa que pida un número entero positivo y muestre por pantalla 
+    todos los números impares desde 1 hasta ese número.
+    '''
+    num = int(input("Num: "))
+
+    if num > 0: 
+        for i in range(1, num + 1, 2):
+            print(i)
+    else:
+        print("No es positivo")
+
+# Ejercicio 25 
+def triangulo_rectángulo():
+    '''
+    Escribir un programa que pida un número entero y muestre por pantalla un triángulo rectángulo.
+    '''
+    num = int(input("Ingrese un número entero positivo: "))
+
+    if num > 0:
+        for i in range(1, num + 1):
+            print("* " * i)
+    else:
+        print("Error: Debe ingresar un número entero positivo.")
+
+
 def main():
     menor_o_mayor()
 
